@@ -1,0 +1,139 @@
+body {
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+.header {
+    background-color:black;
+    color:white;
+    text-align:left;
+    padding:5px;
+    display: table;
+    width:100%;
+}
+.title {
+    display: table-cell;
+    vertical-align: middle;
+    background: #247ba7;
+    font-size: xx-large;
+    padding-left: 20px;
+}
+.logo{
+    display: table-cell;
+    width: 300px;
+    background: #f8f8f8;
+    text-align: center;
+}
+.nav {
+    line-height:30px;
+    background-color:#f8f8f8;
+    height:630px;
+    width:300px;
+    float:left;
+    padding:5px;	      
+}
+.section {
+    float:left;
+    padding:10px;
+}
+.console_block {
+    float:right;
+    padding:10px;
+    overflow: auto;
+    height:630px;
+    background:aliceblue;
+}
+.console_row {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 10px;
+    width: 400px;
+}
+.console_error_msg {
+    color:red;
+}
+@keyframes msgkf{
+    from {background:lightyellow;}
+    50% {background:yellow;}
+    to {background:lightgoldenrodyellow;}
+}
+
+.console_row_blink {
+    animation:msgkf 300ms 3;
+}
+.footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+.nav_button {
+    background-color: #247ba7; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width:100%;
+}
+.nav_button_item {
+    background-color: #247ba7; 
+    color: white; 
+    border: 2px solid #008CBA;
+}
+
+.nav_button_item:hover {
+    background-color: white;
+    color: black;
+}
+
+.cmd_button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;   
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: steelblue;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cmd_button:hover {background-color: skyblue}
+
+.cmd_button:active {
+  background-color: skyblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.gas_block {
+    padding-top: 100%;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+
+select {
+    font-size: medium;
+    height: 30px;
+    width: 450px;
+}
+
+input {
+    font-size: medium;
+    color: steelblue;
+}

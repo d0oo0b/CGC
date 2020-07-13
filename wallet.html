@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wallet</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link type="text/css" rel="stylesheet" href="static/wallet.css">
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <!--<script type="text/javascript" src="./node_modules/amazon-cognito-identity-js/dist/amazon-cognito-identity.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.266.1.min.js"></script>
+    <script src="static/util.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="/static/MC2logo.jpeg" width="100px" height="100px"></img></div>
+        
+        <div class="title">
+            Bank A's Wallet
+        </div>
+        
+    </div>
+    <div class="nav">
+        <br/>
+        <button id="nav_payment" class="nav_button nav_button_item">LC Payment</button>
+        <br>
+        <button id="nav_claim" class="nav_button nav_button_item">Claim Pay</button>
+        <div class="gas_block">
+            <table>
+                <tr>
+                    <td><label for="gas">Gas</label></td>
+                    <td><input id="gas" value="3000000"/></td>
+                </tr>
+                <tr>
+                    <td><label for="gasPrice">Gas Price</label></td>
+                    <td><input id="gasPrice" value="100000000000"/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="section">
+        <div class="account_block">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>Accounts</h2></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <select id="MC2Account_select">
+                            <option value = "0">Choose the MC2 account...</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="available_balance">Available Balance</label></td>
+                    <td><input id="available_balance" readonly="readonly" value="0"/></td>
+                </tr>
+                    <td><label for="frozen_balance">Frozen Balance</label></td>
+                    <td><input id="frozen_balance" readonly="readonly" value="0"/></td>
+                </tr>
+                    <td><label for="transitting_balance">Balance In Transit</label></td>
+                    <td><input id="transitting_balance" readonly="readonly" value="0"/></td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="payment_block">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>LC Payment</h2></td>
+                </tr>
+                <tr>
+                    <td><label for="beneficiary_account">Beneficiary Account</label></td>
+                    <td><input type="text" id="beneficiary_account"/></td>
+                </tr>
+                <tr>
+                    <td><label for="bill_id">Bill ID</label></td>
+                    <td><input type="text" id="bill_id"/></td>
+                </tr>
+                <tr>
+                    <td><label for="amount">Amount</label></td>
+                    <td><input type="number" id="bill_amount"/></td>
+                </tr>
+                <tr>
+                    <td><label for="lc_doc">Letter of Credit</label></td>
+                    <td><textarea id="lc_doc" rows=10 cols=50></textarea></td>
+                </tr>
+                <tr>
+                    <td><label>Passphrase</label></td>
+                    <td><input id="passphrase" type="password"></td>
+                </tr>
+                    <td colspan="2"><button id="pay_button" class="cmd_button">JUST DO IT!</button></td>
+                </tr>
+            </table>
+            
+            
+        </div>
+        
+        <div class="claim_block">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>Claim Pay</h2></td>
+                </tr>
+                <tr>
+                    <td><label for="pay_account">Payment Account</label></td>
+                    <td><input type="text" id="pay_account"/></td>
+                </tr>
+                <tr>
+                    <td><label for="bill_id_p">Bill ID</label></td>
+                    <td><input type="text" id="bill_id_p"/></td>
+                </tr>
+                <tr>
+                    <td><label for="amount_p">Amount</label></td>
+                    <td><input type="number" id="bill_amount_p"/></td>
+                </tr>
+                <tr>
+                    <td><label for="lc_doc_p">Letter of Credit</label></td>
+                    <td><textarea id="lc_doc_p" rows=10 cols=50></textarea></td>
+                </tr>
+                <tr>
+                    <td><label>Passphrase</label></td>
+                    <td><input id="passphrase_p" type="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button id="claim_button" class="cmd_button">JUST DO IT!</button></td>
+                </tr>
+                
+            </table>
+            
+        </div>
+    </div>
+    <div class="console_block">
+        
+    </div>
+    <div class="footer">
+        <a href="https://MC2-bank-user.auth.us-east-1.amazoncognito.com/logout?response_type=token&client_id=584lnsd3itrbhgkcljcuq80n23&redirect_uri=https://MC2wallet-a.shenqianyu.com/wallet.html&state=STATE&scope=openid">sign out</a>
+        
+    </div>
+    <script type="text/javascript">
+        $( document ).ready(function(){
+            $(".claim_block").hide();
+            $("#nav_payment").click(function(){
+                $(".claim_block").hide("slow");
+                $(".payment_block").show("fast");
+            });
+            $("#nav_claim").click(function(){
+                $(".payment_block").hide("slow");
+                $(".claim_block").show("fast");
+            });
+        });
+        
+    </script>
+</body>
+</html>

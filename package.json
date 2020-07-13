@@ -1,0 +1,19 @@
+{
+  "name": "myweb3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amazon-cognito-identity-js": "^2.0.13",
+    "aws-appsync": "^1.1.4",
+    "aws-appsync-react": "^1.0.19",
+    "graphql-tag": "^2.9.2",
+    "react-apollo": "^2.1.9",
+    "web3": "github:ethereum/web3.js"
+  }
+}
