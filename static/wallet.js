@@ -1,6 +1,5 @@
 /*
 Author: Shen Hong
-Email: shenhaws@amazon.com
 */
 
 var msg =  {
