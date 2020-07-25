@@ -19,6 +19,8 @@ This demo is build on AWS with Cognito, DynamoDB, Kinesis.
 		|-MC2Coin.txt			[ Smart contract]
 	|-Queries
 		|-accountQuery			[ Query interface]
+	|-package-lock.json			[ As package.json]
+	|-package.json				[ Configration of WEB3]
 		
 
 ```
