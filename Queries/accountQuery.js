@@ -1,3 +1,8 @@
+/*
+Author: Shen Hong
+
+*/
+
 import gql from '../node_modules/graphql-tag';
 
 export default gql`
