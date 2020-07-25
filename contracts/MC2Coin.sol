@@ -3,7 +3,7 @@ pragma experimental ABIEncoderV2;
 
 /*
 Author: Shen Hong
-Email: shenhaws@amazon.com
+
 */
 
 
