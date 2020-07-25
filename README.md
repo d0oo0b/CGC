@@ -17,6 +17,9 @@ This demo is build on AWS with Cognito, DynamoDB, Kinesis.
 		|-util.js				[ UTIL Script. Authenticate users through Cognito.]
 	|-contracts
 		|-MC2Coin.txt			[ Smart contract]
+	|-Queries
+		|-accountQuery			[ Query interface]
+		
 
 ```
 
