@@ -93,7 +93,8 @@ Saving artifacts...
 
 ## Demo
 
-![](static/demo.png)
+![](https://github.com/d0oo0b/CGC/blob/master/static/demo.png)
+![](https://github.com/d0oo0b/CGC/blob/master/static/arch.png)
 
 ```
 |-MC2
